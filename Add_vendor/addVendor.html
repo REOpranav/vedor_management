@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanitized Form</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="/Add_Vendor/AddVendor.html">Add Vendor</a>
+        <a href="/All_Vendor/allVendor.html">All Vendors</a>
+    </div>
+    <form method="post">
+        <label for="vendorName"><span style="color: red;">*</span>Vendor Name:</label>
+        <input type="text" id="vendorName" name="vendorName"><br><br>
+
+        <label for="totalSpend"><span style="color: red;">*</span>Total Spend:</label>
+        <input type="number" id="totalSpend" name="totalSpend"><br><br>
+
+        <label for="service"><span style="color: red;">*</span>Vendor Service:</label>
+        <input type="text" id="service" name="service"><br><br>
+
+        <label for="location "><span style="color: red;">*</span>Vendor Location:</label>
+        <input type="text" id="location" name="location"><br><br>
+
+        <label for="status"><span style="color: red;">*</span>Status:</label>
+        <select id="status" name="status">
+            <option value="">Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+            <option value="Pending">Pending</option>
+        </select><br><br>
+
+        <label for="contactPerson"><span style="color: red;">*</span>Contact Person:</label>
+        <input type="text" id="contactPerson" name="contactPerson"><br><br>
+
+        <label for="email"><span style="color: red;">*</span>Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="mobile"><span style="color: red;">*</span>Mobile:</label>
+        <input type="number" id="mobile" name="mobile"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="addVendor.js"></script>
+</body>
+
+</html>
