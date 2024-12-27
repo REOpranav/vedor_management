@@ -31,21 +31,27 @@ vendorName.addEventListener('click', (eve) => {
 form.addEventListener('submit', async (eve) => {
     eve.preventDefault()
     let getVendorName = await fetchSpecificVendor(document.querySelector('#vendorName').value)
+
+    let quality = document.querySelector('input[name="quality"]:checked').value == 'poor' ? 1.5 : 3.33
+    let delivery = document.querySelector('input[name="delivery"]:checked').value == 'poor' ? 1.5 : 3.33
+    let service_rating = document.querySelector('input[name="service_rating"]:checked').value == 'poor' ? 1.5 : 3.33
+
     let userReviewData = {
-        id : document.querySelector('#vendorName').value,
+        id: document.querySelector('#vendorName').value,
         quality: document.querySelector('input[name="quality"]:checked').value,
         delivery: document.querySelector('input[name="delivery"]:checked').value,
         service_rating: document.querySelector('input[name="service_rating"]:checked').value,
         vendorName: getVendorName[0].vendorName,
-        service: document.querySelector('#service').value
+        service: document.querySelector('#service').value,
+        rating: quality + delivery + service_rating
     }
 
     for (const key in userReviewData) {
         if (userReviewData[key] == '') {
             return
         }
-        await postingVendorReview(userReviewData)
     }
+    postingVendorReview(userReviewData)
 })
 
 // fetching the specific vendors
@@ -79,14 +85,18 @@ const postingVendorReview = async (vendorReviewValue) => {
     try {
         const posting = await fetch(`http://localhost:3000/vendorReview`, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(vendorReviewValue)
         })
-        if (!posting.ok) { throw new Error(posting.statusText) }
 
         if (posting.ok) {
-            alert('vendor review posted')
-            window.location.href = '/'
+            window.location.href = '/Vendor_review/vendorReview.html'
         }
+
+        if (!posting.ok) { throw new Error(posting.statusText) }
+        form.reset()
     } catch (err) {
         console.log(err.message);
     }
