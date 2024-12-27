@@ -16,8 +16,8 @@ async function fetchVendors() { // Initially get all the data from DB
             option.textContent = value[0]
             searchKey.appendChild(option)
         })
-
         displayVendors(vendors)
+        return vendors
     } catch (err) {
         console.error('Error fetching vendors:', err.message)
     }
@@ -68,3 +68,5 @@ function searchingValue(totalList, searchedKey, value) {
 }
 
 window.addEventListener('load', fetchVendors)
+
+export { fetchVendors }

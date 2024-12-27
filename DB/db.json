@@ -2,7 +2,7 @@
   "vendors": [
     {
       "id": 740609884,
-      "vendorName": "iangar   ",
+      "vendorName": "iangar",
       "totalSpend": "100",
       "service": "software",
       "location": "chennai",
@@ -54,6 +54,16 @@
       "contactPerson": "sd",
       "email": "skd@gmail.com",
       "mobile": "1222131231"
+    }
+  ],
+  "vendorReview": [
+    {
+      "id": "370344178",
+      "quality": "good",
+      "delivery": "good",
+      "service_rating": "good",
+      "vendorName": "sundar",
+      "service": "managing"
     }
   ]
 }
