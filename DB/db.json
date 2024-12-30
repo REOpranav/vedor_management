@@ -95,5 +95,17 @@
       "service": "software",
       "rating": 9.99
     }
+  ],
+  "contracts": [
+
+    {
+      "id": "370344178",
+      "vendorName": "sundar",
+      "vendorTitle": "saas",
+      "contractType": "consulting",
+      "startDate": "2025-11-30",
+      "endDate": "2026-01-31",
+      "contractValue": "1212"
+    }
   ]
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Detail</title>
+    <title>All Contracts</title>
     <link rel="stylesheet" href="/index.css">
 </head>
 
@@ -16,14 +16,26 @@
         <a href="/Vendor_review/vendorReview.html">Vendors Review</a>
         <a href="/Add_Contract/addContract.html">Add Contract</a>
         <a href="/All_contract/allContract.html">All Contracts</a>
+    </div>
 
-    </div>
-    <div style="text-align: end;padding: 10px;">
-        <Button style="padding: 10px;" onclick="window.history.back(-1)">Back</Button>
-    </div>
-    <main>
-    </main>
-    <script src="vendor_detail.js"></script>
+    <h2>All Contracts</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Vendor Name</th>
+                <th>Vendor Title</th>
+                <th>Contract Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Contract Value</th>
+            </tr>
+        </thead>
+        <tbody id="contractTableBody">
+        </tbody>
+    </table>
+
+    <script src="allContract.js"></script>
 </body>
 
 </html>
