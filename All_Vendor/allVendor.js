@@ -68,5 +68,3 @@ function searchingValue(totalList, searchedKey, value) {
 }
 
 window.addEventListener('load', fetchVendors)
-
-export { fetchVendors }
